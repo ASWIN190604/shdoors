@@ -19,7 +19,7 @@ const PRODUCT_LINKS = [
   { to: "/products?cat=exterior", label: "Exterior Doors" },
 ];
 
-export default function Footer() {
+export default function Footer({ onReplayIntro }) {
   const year = new Date().getFullYear();
   const whatsAppUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
@@ -183,9 +183,21 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "#6B6457" }}>
             © {year} S.S.T. Doors. All rights reserved.
           </p>
-          <p className="text-xs" style={{ color: "#6B6457" }}>
-            Manufacturer &amp; Wholesaler · Erode, Tamil Nadu
-          </p>
+          <div className="flex items-center gap-4">
+            {onReplayIntro && (
+              <button
+                type="button"
+                onClick={onReplayIntro}
+                className="text-xs transition-colors hover:underline cursor-pointer"
+                style={{ color: "#C89658" }}
+              >
+                Replay Intro
+              </button>
+            )}
+            <p className="text-xs" style={{ color: "#6B6457" }}>
+              Manufacturer &amp; Wholesaler · Erode, Tamil Nadu
+            </p>
+          </div>
         </div>
       </div>
     </footer>

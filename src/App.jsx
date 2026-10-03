@@ -1,10 +1,11 @@
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileActionBar from "./components/MobileActionBar";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SplashScreen from "./components/SplashScreen";
 
 // Lazy load pages for performance
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -48,13 +49,13 @@ function ScrollToTop() {
   return null;
 }
 
-function AppRoutes() {
+function AppRoutes({ onReplayIntro }) {
   const location = useLocation();
 
   return (
     <>
       <ScrollToTop />
-      <Navbar />
+      <Navbar onReplayIntro={onReplayIntro} />
       <main id="main-content">
         <Suspense fallback={<PageLoader />}>
           <AnimatePresence mode="wait">
@@ -70,7 +71,7 @@ function AppRoutes() {
           </AnimatePresence>
         </Suspense>
       </main>
-      <Footer />
+      <Footer onReplayIntro={onReplayIntro} />
       <WhatsAppButton />
       <MobileActionBar />
     </>
@@ -78,9 +79,18 @@ function AppRoutes() {
 }
 
 export default function App() {
+  // Splash screen shown on initial visit/reload
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <AnimatePresence>
+        {showSplash && (
+          <SplashScreen onComplete={() => setShowSplash(false)} />
+        )}
+      </AnimatePresence>
+      <AppRoutes onReplayIntro={() => setShowSplash(true)} />
     </BrowserRouter>
   );
 }
+

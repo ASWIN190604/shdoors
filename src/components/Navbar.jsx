@@ -15,7 +15,7 @@ const NAV_LINKS = [
 const whatsAppUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 const callUrl = `tel:${PHONE_NUMBER}`;
 
-export default function Navbar() {
+export default function Navbar({ onReplayIntro }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
@@ -225,6 +225,18 @@ export default function Navbar() {
 
               {/* Bottom CTAs in drawer */}
               <div className="p-6 flex flex-col gap-3 mb-20">
+                {onReplayIntro && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMenuOpen(false);
+                      onReplayIntro();
+                    }}
+                    className="text-center text-xs font-semibold tracking-widest uppercase py-2 text-[#8B5E3C] hover:underline cursor-pointer mb-1"
+                  >
+                    ✦ Replay Intro
+                  </button>
+                )}
                 <a
                   href={callUrl}
                   className="flex items-center justify-center gap-2 py-3 text-xs font-semibold tracking-widest uppercase rounded border transition-all"
