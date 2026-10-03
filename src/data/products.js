@@ -6,9 +6,9 @@
 // Images: place files in /public/images/products/ and reference by filename.
 // ============================================================
 
-export const WHATSAPP_NUMBER = "917942869890"; // No spaces, country code included
-export const PHONE_NUMBER = "+917942869890";
-export const PHONE_DISPLAY = "+91 79428 69890";
+export const WHATSAPP_NUMBER = "919042732565"; // No spaces, country code included
+export const PHONE_NUMBER = "+919042732565";
+export const PHONE_DISPLAY = "+91 90427 32565";
 export const BUSINESS_NAME = "S.S.T. Doors";
 export const BUSINESS_LOCATION = "Erode, Tamil Nadu";
 export const BUSINESS_TYPE = "Manufacturer & Wholesaler";
@@ -89,8 +89,8 @@ export const products = [
     category: "flush",
     categoryLabel: "Flush Door",
     featured: true,
-    image: null, // Will show branded placeholder
-    gallery: [],
+    image: "/images/products/grey-laminated-flush-door.jpg",
+    gallery: ["/images/products/grey-laminated-flush-door.jpg"],
     shortDescription: "Modern laminated flush door in elegant grey, suitable for home applications.",
     description:
       "A clean and contemporary grey laminated flush door that brings a modern touch to any interior space. Finished with a laminated surface for easy maintenance and a sleek appearance. Suitable for residential applications.",
@@ -111,8 +111,8 @@ export const products = [
     category: "flush",
     categoryLabel: "Flush Door",
     featured: true,
-    image: null,
-    gallery: [],
+    image: "/images/products/brown-interior-wooden-flush-door.jpg",
+    gallery: ["/images/products/brown-interior-wooden-flush-door.jpg"],
     shortDescription: "A rich brown interior wooden flush door for residential spaces.",
     description:
       "Crafted from quality wood materials, this brown interior flush door offers warmth and durability for home interiors. Clean flush surface with natural brown tones that complement a wide range of interior styles.",
@@ -130,8 +130,8 @@ export const products = [
     category: "teak",
     categoryLabel: "Teak Wood Door",
     featured: true,
-    image: null,
-    gallery: [],
+    image: "/images/products/dark-brown-teak-wood-door.jpg",
+    gallery: ["/images/products/dark-brown-teak-wood-door.jpg"],
     shortDescription: "Premium dark brown teak wood door with natural grain character.",
     description:
       "A statement-making dark brown teak wood door that brings the natural elegance of teak into your home. The distinctive grain pattern and deep brown tones create a lasting impression at any entrance.",
@@ -167,8 +167,8 @@ export const products = [
     category: "membrane",
     categoryLabel: "Membrane Door",
     featured: true,
-    image: null,
-    gallery: [],
+    image: "/images/products/interior-wooden-membrane-door.jpg",
+    gallery: ["/images/products/interior-wooden-membrane-door.jpg"],
     shortDescription: "Contemporary membrane door designed for modern interior spaces.",
     description:
       "A stylish wooden membrane door offering contemporary design with a smooth surface texture. Perfect for modern interior applications where aesthetics and functionality come together.",

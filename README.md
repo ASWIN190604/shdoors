@@ -12,7 +12,7 @@ Official website and digital catalog for **S.S.T. Doors** — Manufacturer & Who
 ## Features
 - Premium architectural product catalog
 - Dynamic category filtering & search
-- Direct WhatsApp enquiry with pre-filled product details (`+91 79428 69890`)
+- Direct WhatsApp enquiry with pre-filled product details (`+91 90427 32565`)
 - Quick call integration
 - Fully responsive mobile navigation & sticky quick-action bar
 - Interactive gallery with lightbox
